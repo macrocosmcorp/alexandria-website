@@ -2,26 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@layer utilities {
+  .mono-bold {
+    font-variation-settings: 'wght' 150, 'wdth' 10.3;
+  }
+
+  .mono-medium {
+    font-variation-settings: 'wght' 125, 'wdth' 10.3;
+  }
+
+  .font-thin {
+    font-variation-settings: 'wght' 100, 'wdth' 4.3;
+  }
+
+  .font-extralight {
+    font-variation-settings: 'wght' 140, 'wdth' 4.3;
+  }
+
+  .font-light {
+    font-variation-settings: 'wght' 300, 'wdth' 4.3;
+  }
+
+  .font-normal {
+    font-variation-settings: 'wght' 400, 'wdth' 4.3;
+  }
+
+  .font-medium {
+    font-variation-settings: 'wght' 500, 'wdth' 4.3;
+  }
+
+  .font-semibold {
+    font-variation-settings: 'wght' 600, 'wdth' 4.3;
+  }
+
+  .font-bold {
+    font-variation-settings: 'wght' 700, 'wdth' 4.5;
+  }
+
+  .font-extrabold {
+    font-variation-settings: 'wght' 800, 'wdth' 4.3;
+  }
+
+  .font-black {
+    font-variation-settings: 'wght' 900, 'wdth' 4.3;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'ABC Social';
+  src: url('../../public/fonts/ABCSocialPlusVariableEdu.woff2') format('woff2-variations');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('../../public/fonts/BerkeleyMonoVariable-Regular.woff2') format('woff2-variations');
+  font-display: swap;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #fff;
 }
