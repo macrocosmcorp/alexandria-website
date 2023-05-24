@@ -25,49 +25,36 @@ function Block({ title, children }: { title: string, children: React.ReactNode }
 
 function AlertRow() {
   return (
-    <tr className="text-basesm font-sans font-normal text-letter-default border-b-lines-soft border-b-tiny">
-      <td className="col-span-5">
-        <div style={{ width: '100%' }}>
-          Help us decide what to embed next by voting below!
-        </div>
-      </td>
-    </tr>
-  )
+    <div className="w-full p-2 text-basesm font-sans font-normal text-letter-default border-b-lines-soft border-b-tiny">
+      Help us decide what to embed next by voting below!
+    </div>
+  );
 }
 
-function DownloadRow({ date, description, documents, size, link }: { date: string, description: string, documents: string, size: string, link: string }) {
+function DownloadRow({ date, description, documents, size, link }) {
   return (
-    <tr className="text-basesm font-sans font-normal text-letter-default border-b-lines-soft border-b-tiny">
-      <td className="w-28 pl-1 h-[29px]">
-        <MonospaceLabel text={date} color="grey" width={98} />
-      </td>
-      <td className="w-full">{description}</td>
-      <td className="w-28">
-        <MonospaceLabel text={documents} color="blue" width={98} />
-      </td>
-      <td className="w-28">
-        <MonospaceLabel text={size} color="yellow" width={98} />
-      </td>
-      <td className="w-28">
-        <MonospaceLink text="DOWNLOAD" color="red" width={98} link={link} />
-      </td>
-    </tr>
-  )
+    <div className="grid grid-cols-downloadRow text-basesm font-sans font-normal text-letter-default border-b-lines-soft border-b-tiny h-[29px] items-center">
+      <div className="pl-1"><MonospaceLabel text={date} color="grey" width={98} /></div>
+      <div className="overflow-hidden overflow-ellipsis whitespace-nowrap pr-1">{description}</div>
+      <div><MonospaceLabel text={documents} color="blue" width={98} /></div>
+      <div><MonospaceLabel text={size} color="yellow" width={98} /></div>
+      <div><MonospaceLink text="DOWNLOAD" color="red" width={98} link={link} /></div>
+    </div>
+  );
 }
+
 
 function DownloadsBlock() {
   return (
-    <table className="w-full mt-1 border-tiny border-lines-soft text-left">
-      <thead>
-        <tr className="text-basesm font-sans font-semibold text-letter-default bg-background-darkgrey border-b-lines-darkest border-b-tiny">
-          <th className="w-28 pl-2 py-0.5">Timestamp</th>
-          <th className="w-full">Description</th>
-          <th className="w-28">Documents</th>
-          <th className="w-28">Size</th>
-          <th className="w-28">Link</th>
-        </tr>
-      </thead>
-      <tbody>
+    <div className="w-full mt-1 border-t-tiny border-x-tiny border-lines-soft">
+      <div className="grid grid-cols-downloadRow text-basesm font-sans font-semibold text-letter-default bg-background-darkgrey border-b-lines-darkest border-b-tiny">
+        <div className="pl-2 py-0.5">Timestamp</div>
+        <div className="flex-grow py-0.5">Description</div>
+        <div className="py-0.5">Documents</div>
+        <div className="py-0.5">Size</div>
+        <div className="py-0.5">Link</div>
+      </div>
+      <div className="flex flex-col">
         <DownloadRow
           date="2021-10-01"
           description="All papers on Arxiv.org embedded by title using the InstructorXL model."
@@ -96,8 +83,14 @@ function DownloadsBlock() {
           size="6.5 GB"
           link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
         />
-        <AlertRow />
-      </tbody>
-    </table>
+        <DownloadRow
+          date="2021-10-01"
+          description="All papers on Arxiv.org embedded by title using the InstructorXL model."
+          documents="2.3 M"
+          size="6.5 GB"
+          link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
+        />
+      </div>
+    </div>
   )
 }

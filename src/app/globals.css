@@ -70,3 +70,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: #fff;
 }
+
+.grid-cols-downloadRow {
+  grid-template-columns: 113px 1fr 113px 118px 103px;
+}
