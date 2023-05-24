@@ -3,6 +3,15 @@ import Footer from '@/components/footer';
 import Header from '../../components/header';
 import { MonospaceLabel, MonospaceLink } from '../../components/label';
 
+const tweetText = (subject: string) => `I'm voting for @macrocosmcorp to embed ${subject} and open-source the weights.`
+
+function generateTwitterIntent(text: string, url: string) {
+  var startText = 'https://twitter.com/intent/tweet?text=';
+  var generatedTweet = encodeURIComponent(text);
+  var generatedUrl = url ? "&url=" + encodeURIComponent(url) : "";
+  return startText + generatedTweet + generatedUrl;
+}
+
 export default function Download() {
   return (
     <main className="flex flex-col mx-auto max-w-custom min-h-screen flex-grow pt-4 px-2">
@@ -105,34 +114,32 @@ function DownloadsBlock() {
           description="All US cases from the Case Law Project using the InstructorXL model."
           documents="36.3 M"
           size="~80 GB"
-          link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
+          link={generateTwitterIntent(tweetText("all of US Case Law"), 'https://alex.macrocosm.so/download')}
         />
         <VoteRow
           description="All patents on USPTO embedded using the InstructorXL model."
           documents="18.2 M"
           size="~61 GB"
-          link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
+          link={generateTwitterIntent(tweetText('all USPTO patents'), 'https://alex.macrocosm.so/download')}
         />
         <VoteRow
           description="All of English Wikipedia embedded using the InstructorXL model."
           documents="6.6 M"
           size="~22 GB"
-          link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
+          link={generateTwitterIntent(tweetText('all of English Wikipedia'), 'https://alex.macrocosm.so/download')}
         />
         <VoteRow
           description="All repositories on Github using a to-be-determined model."
           documents="3.1 B"
           size="~3.4 TB"
-          link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
+          link={generateTwitterIntent(tweetText('all repositories on Github'), 'https://alex.macrocosm.so/download')}
         />
         <VoteRow
           description="All major religious texts embedded using the InstructorXL model. "
           documents="50 M"
           size="~20 GB"
-          link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
+          link={generateTwitterIntent(tweetText('all major religious texts'), 'https://alex.macrocosm.so/download')}
         />
-
-
       </div>
     </div>
   )
