@@ -23,6 +23,7 @@ module.exports = {
       },
       colors: {
         lines: {
+          offwhite: '#F1F1F1',
           softest: '#CCCCCC',
           soft: '#BFBFBF',
           dark: '#6D6D6D',
@@ -37,6 +38,7 @@ module.exports = {
           softest: '#7D7D7D',
           soft: '#6F6F6F',
           footer: '#959595',
+          dark: '#222',
           default: '#000000',
         },
         background: {

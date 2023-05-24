@@ -12,6 +12,10 @@
     font-variation-settings: 'wght' 125;
   }
 
+  .font-footer {
+    font-variation-settings: 'wght' 700, 'wdth' 5;
+  }
+
   .font-thin {
     font-variation-settings: 'wght' 100, 'wdth' 4.3;
   }
@@ -37,7 +41,7 @@
   }
 
   .font-bold {
-    font-variation-settings: 'wght' 700, 'wdth' 4.5;
+    font-variation-settings: 'wght' 650, 'wdth' 4.5;
   }
 
   .font-extrabold {

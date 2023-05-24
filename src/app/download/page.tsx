@@ -1,34 +1,72 @@
+import clsx from "clsx";
 import Header from '../../components/header';
 import { MonospaceLabel, MonospaceLink } from '../../components/label';
 
+
 export default function Download() {
   return (
-    <main className="flex flex-col mx-auto max-w-custom h-screen p-10">
+    <main className="flex flex-col mx-auto max-w-custom h-screen pt-4">
       <Header />
       <div className="flex flex-col w-full mt-8">
         <Block title="Downloads">
           <DownloadsBlock />
         </Block>
+        <Block title="Support" margin={8}>
+          <AboutBlock />
+        </Block>
       </div>
+      <Footer />
     </main>
   )
 }
 
-function Block({ title, children }: { title: string, children: React.ReactNode }) {
+function Footer() {
   return (
-    <div className="flex flex-col w-full">
-      <h1 className="text-base font-sans font-bold text-letter-default">{title}</h1>
+    <div className="flex flex-col w-full mt-auto mb-2.5">
+      <hr className="w-full border-[1px] border-lines-offwhite mb-2" />
+      <div className="flex flex-row justify-between items-center">
+        <div className="flex flex-row gap-1">
+          <h3 className="text-sm font-sans font-footer text-[#ccc]">
+            THE MACROCOSM CORPORATION
+          </h3>
+          <h3 className="text-sm font-sans font-footer text-[#ccc]">
+            © 2100
+          </h3>
+        </div>
+        <div className="flex flex-row gap-4">
+          <h3 className="text-sm font-sans font-footer text-[#ccc]">
+            LEGAL
+          </h3>
+          <h3 className="text-sm font-sans font-footer text-[#ccc]">
+            CONTACT
+          </h3>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function Block({ title, margin, children }: { title: string, margin?: number, children: React.ReactNode }) {
+  const marginStyle = margin ? `mt-${margin}` : '';
+  return (
+    <div className={clsx("flex flex-col w-full", marginStyle)}>
+      <h1 className="text-base font-sans font-bold text-letter-default mb-1">{title}</h1>
       {children}
     </div>
   )
 }
 
-function AlertRow() {
+function AboutBlock() {
   return (
-    <div className="w-full p-2 text-basesm font-sans font-normal text-letter-default border-b-lines-soft border-b-tiny">
-      Help us decide what to embed next by voting below!
+    <div className="w-full px-2 py-1 border-tiny border-lines-soft">
+      <p className='text-basesm font-sans font-normal text-letter-default'>
+        Help support our initiative by building with our datasets, voting on what you want next, spreading the word about the project, or even donating to help us in our mission to embed the internet. If you’re interested in our work or want to contribute, get in touch!
+      </p>
+      <p className='text-basesm font-sans font-normal text-letter-soft'>
+        PS. Are you a vector database company? Want the future to be built on your platform? We're looking for partners to build Alexandria.
+      </p>
     </div>
-  );
+  )
 }
 
 interface DownloadRowProps {
@@ -65,7 +103,7 @@ function VoteRow({ description, documents, size, link }: VoteRowProps) {
       <div className="overflow-hidden overflow-ellipsis whitespace-nowrap pr-1">{description}</div>
       <div><MonospaceLabel text={documents} color="blue" width={98} /></div>
       <div><MonospaceLabel text={size} color="yellow" width={98} /></div>
-      <div className='flex justify-end pr-[5px]'><MonospaceLink text="VOTE" color="green" width={65} link={link} /></div>
+      <div ><MonospaceLink text="VOTE" color="green" width={98} link={link} /></div>
     </div>
   );
 }
@@ -73,8 +111,8 @@ function VoteRow({ description, documents, size, link }: VoteRowProps) {
 
 function DownloadsBlock() {
   return (
-    <div className="w-full mt-1 border-t-tiny border-x-tiny border-lines-soft">
-      <div className="grid grid-cols-downloadRow text-basesm font-sans font-semibold text-letter-default bg-background-darkgrey border-b-lines-darkest border-b-tiny">
+    <div className="w-full border-t-tiny border-x-tiny border-lines-soft">
+      <div className="grid grid-cols-downloadRow text-basesm font-sans font-semibold text-letter-dark bg-background-darkgrey border-b-lines-darkest border-b-tiny">
         <div className="pl-2 py-0.5">Timestamp</div>
         <div className="flex-grow py-0.5">Description</div>
         <div className="py-0.5">Documents</div>
@@ -83,17 +121,17 @@ function DownloadsBlock() {
       </div>
       <div className="flex flex-col">
         <DownloadRow
-          date="2021-10-01"
+          date="2023-05-04"
           description="All papers on Arxiv.org embedded by title using the InstructorXL model."
           documents="2.3 M"
           size="6.5 GB"
           link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
         />
         <DownloadRow
-          date="2021-10-01"
-          description="All papers on Arxiv.org embedded by title using the InstructorXL model."
+          date="2023-05-04"
+          description="All papers on Arxiv.org embedded by abstract using the InstructorXL model."
           documents="2.3 M"
-          size="6.5 GB"
+          size="7.6 GB"
           link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
         />
         <div className="flex text-basesm font-sans font-normal text-letter-softest border-b-lines-soft border-b-tiny h-[29px] items-center justify-center pt-0.5">
