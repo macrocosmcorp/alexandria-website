@@ -5,11 +5,11 @@
 
 @layer utilities {
   .mono-bold {
-    font-variation-settings: 'wght' 150, 'wdth' 10.3;
+    font-variation-settings: 'wght' 150;
   }
 
   .mono-medium {
-    font-variation-settings: 'wght' 125, 'wdth' 10.3;
+    font-variation-settings: 'wght' 125;
   }
 
   .font-thin {

@@ -47,7 +47,7 @@ function PageSelectorButton({ state, text }: { state: PageSelectorState, text: s
       break;
   }
   return (
-    <div className={clsx(buttonBaseStyle, ...styles)}>
+    <div className={clsx(buttonBaseStyle, ...styles, 'text-wide')}>
       {text}
       {state === PageSelectorState.Active && <svg
         xmlns="http://www.w3.org/2000/svg"

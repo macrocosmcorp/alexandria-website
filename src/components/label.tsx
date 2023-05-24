@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Link from 'next/link';
 
 const colorStyles = {
   blue: {
@@ -51,17 +52,20 @@ export const MonospaceLabel = ({ text, color, width }: MonospaceProps) => {
   );
 };
 
-export const MonospaceLink = ({ text, color, width }: MonospaceProps) => {
+export const MonospaceLink = ({ text, color, width, link }: MonospaceProps & { link: string }) => {
   const { background, border, text: textColor } = colorStyles[color];
   const boxStyle = clsx('inline-flex flex-row items-center leading-4 pb-[1px] justify-center gap-1 border-micro', background, border);
   const textStyle = clsx("text-[13px] font-mono mono-bold", textColor);
   const arrowStyle = clsx("text-[14px] font-sans font-medium", textColor);
+  const hoverStyle = clsx("hover:bg-black hover:text-white hover:fill-white hover:border-lines-black")
 
   return (
-    <div className={boxStyle} style={{ width }}>
-      <h1 className={textStyle}>{text}</h1>
-      <h1 className={arrowStyle}>{' -> '}</h1>
-    </div>
+    <Link href={link}>
+      <div className={clsx(boxStyle, hoverStyle)} style={{ width }}>
+        <h1 className={textStyle}>{text}</h1>
+        <h1 className={arrowStyle}>{' -> '}</h1>
+      </div>
+    </Link>
   );
 };
 
