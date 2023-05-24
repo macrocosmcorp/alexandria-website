@@ -27,7 +27,7 @@ function Footer() {
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row gap-1">
           <h3 className="text-sm font-sans font-footer text-[#ccc]">
-            THE MACROCOSM CORPORATION
+            THE MACROCOSM CONSORTIUM
           </h3>
           <h3 className="text-sm font-sans font-footer text-[#ccc]">
             © 2100
@@ -63,7 +63,7 @@ function AboutBlock() {
         Help support our initiative by building with our datasets, voting on what you want next, spreading the word about the project, or even donating to help us in our mission to embed the internet. If you’re interested in our work or want to contribute, get in touch!
       </p>
       <p className='text-basesm font-sans font-normal text-letter-soft'>
-        PS. Are you a vector database company? Want the future to be built on your platform? We're looking for partners to build Alexandria.
+        PS. Are you a vector database company? Want the future to be built on your platform? We&apos;re looking for partners to build Alexandria.
       </p>
     </div>
   )

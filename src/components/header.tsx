@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Image from 'next/image';
-import Logo from "../../public/AlexandriaLogo.svg";
+import Logo from "../../public/images/AlexandriaLogo.svg";
 
 
 export default function Header() {
