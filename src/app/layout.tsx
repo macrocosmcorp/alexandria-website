@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'THE ALEXANDRIA INDEX',
-  description: 'From barbarism to civilization requires a century; from civilization to barbarism needs but a day. Built by THE MACROCOSM CONSORTIUM',
+  description: 'From barbarism to civilization requires a century; from civilization to barbarism needs but a day.',
 }
 
 export default function RootLayout({
