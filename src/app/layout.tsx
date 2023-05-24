@@ -30,10 +30,6 @@ export const metadata = {
     creatorId: '1515531815594864640',
     images: ['https://alex.macrocosm.so/static/AlexOG.png'],
   },
-  icons: {
-    icon: '/static/favicon.ico',
-  },
-
 }
 
 export default function RootLayout({
