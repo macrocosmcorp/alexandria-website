@@ -32,6 +32,11 @@ const colorStyles = {
     border: "border-lines-red",
     text: "text-letter-white",
   },
+  green: {
+    background: "bg-background-green",
+    border: "border-lines-green",
+    text: "text-letter-white",
+  },
 };
 
 interface MonospaceProps {

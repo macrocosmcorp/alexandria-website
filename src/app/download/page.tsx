@@ -31,7 +31,15 @@ function AlertRow() {
   );
 }
 
-function DownloadRow({ date, description, documents, size, link }) {
+interface DownloadRowProps {
+  date: string;
+  description: string;
+  documents: string;
+  size: string;
+  link: string;
+}
+
+function DownloadRow({ date, description, documents, size, link }: DownloadRowProps) {
   return (
     <div className="grid grid-cols-downloadRow text-basesm font-sans font-normal text-letter-default border-b-lines-soft border-b-tiny h-[29px] items-center">
       <div className="pl-1"><MonospaceLabel text={date} color="grey" width={98} /></div>
@@ -39,6 +47,25 @@ function DownloadRow({ date, description, documents, size, link }) {
       <div><MonospaceLabel text={documents} color="blue" width={98} /></div>
       <div><MonospaceLabel text={size} color="yellow" width={98} /></div>
       <div><MonospaceLink text="DOWNLOAD" color="red" width={98} link={link} /></div>
+    </div>
+  );
+}
+
+interface VoteRowProps {
+  description: string;
+  documents: string;
+  size: string;
+  link: string;
+}
+
+function VoteRow({ description, documents, size, link }: VoteRowProps) {
+  return (
+    <div className="grid grid-cols-downloadRow text-basesm font-sans font-normal text-letter-default border-b-lines-soft border-b-tiny h-[29px] items-center">
+      <div className="pl-1"><MonospaceLabel text="??????" color="grey" width={98} /></div>
+      <div className="overflow-hidden overflow-ellipsis whitespace-nowrap pr-1">{description}</div>
+      <div><MonospaceLabel text={documents} color="blue" width={98} /></div>
+      <div><MonospaceLabel text={size} color="yellow" width={98} /></div>
+      <div className='flex justify-end pr-[5px]'><MonospaceLink text="VOTE" color="green" width={65} link={link} /></div>
     </div>
   );
 }
@@ -69,27 +96,41 @@ function DownloadsBlock() {
           size="6.5 GB"
           link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
         />
-        <DownloadRow
-          date="2021-10-01"
-          description="All papers on Arxiv.org embedded by title using the InstructorXL model."
-          documents="2.3 M"
-          size="6.5 GB"
+        <div className="flex text-basesm font-sans font-normal text-letter-softest border-b-lines-soft border-b-tiny h-[29px] items-center justify-center pt-0.5">
+          ↓ &nbsp; Help us decide what to embed next by voting below! &nbsp; ↓
+        </div>
+        <VoteRow
+          description="All US cases from the Case Law Project using the InstructorXL model."
+          documents="36.3 M"
+          size="~80 GB"
           link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
         />
-        <DownloadRow
-          date="2021-10-01"
-          description="All papers on Arxiv.org embedded by title using the InstructorXL model."
-          documents="2.3 M"
-          size="6.5 GB"
+        <VoteRow
+          description="All patents on USPTO embedded using the InstructorXL model."
+          documents="18.2 M"
+          size="~61 GB"
           link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
         />
-        <DownloadRow
-          date="2021-10-01"
-          description="All papers on Arxiv.org embedded by title using the InstructorXL model."
-          documents="2.3 M"
-          size="6.5 GB"
+        <VoteRow
+          description="All of English Wikipedia embedded using the InstructorXL model."
+          documents="6.6 M"
+          size="~22 GB"
           link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
         />
+        <VoteRow
+          description="All repositories on Github using a to-be-determined model."
+          documents="3.1 B"
+          size="~3.4 TB"
+          link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
+        />
+        <VoteRow
+          description="All major religious texts embedded using the InstructorXL model. "
+          documents="50 M"
+          size="~20 GB"
+          link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
+        />
+
+
       </div>
     </div>
   )
