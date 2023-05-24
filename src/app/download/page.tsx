@@ -5,7 +5,7 @@ import { MonospaceLabel, MonospaceLink } from '../../components/label';
 
 export default function Download() {
   return (
-    <main className="flex flex-col mx-auto max-w-custom h-screen pt-4 px-2">
+    <main className="flex flex-col mx-auto max-w-custom min-h-screen flex-grow pt-4 px-2">
       <Header />
       <div className="flex flex-col w-full mt-8">
         <Block title="Downloads">
@@ -89,14 +89,14 @@ function DownloadsBlock() {
           description="All papers on Arxiv.org embedded by title using the InstructorXL model."
           documents="2.3 M"
           size="6.5 GB"
-          link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
+          link="https://drive.google.com/file/d/1Ul5mPePtoPKHZkH5Rm6dWKAO11dG98GN/view?usp=share_link"
         />
         <DownloadRow
           date="2023-05-04"
           description="All papers on Arxiv.org embedded by abstract using the InstructorXL model."
           documents="2.3 M"
           size="7.6 GB"
-          link="https://drive.google.com/file/d/1-0Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing"
+          link="https://drive.google.com/file/d/1g3K-wlixFxklTSUQNZKpEgN4WNTFTPIZ/view?usp=share_link"
         />
         <div className="flex text-basesm font-sans font-normal text-letter-softest border-b-lines-soft border-b-tiny h-[29px] items-center justify-center pt-0.5">
           ↓ &nbsp; Help us decide what to embed next by voting below! &nbsp; ↓

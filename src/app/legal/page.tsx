@@ -5,7 +5,7 @@ import Header from '../../components/header';
 
 export default function Legal() {
   return (
-    <main className="flex flex-col mx-auto max-w-custom h-auto pt-4 px-2">
+    <main className="flex flex-col mx-auto max-w-custom min-h-screen flex-grow pt-4 px-2">
       <Header />
       <div className="flex flex-col w-full mt-8 mb-16">
         <Block title="Legal" >
