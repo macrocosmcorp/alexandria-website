@@ -1,11 +1,11 @@
-import clsx from "clsx";
+import Block from '@/components/body';
+import Footer from '@/components/footer';
 import Header from '../../components/header';
 import { MonospaceLabel, MonospaceLink } from '../../components/label';
 
-
 export default function Download() {
   return (
-    <main className="flex flex-col mx-auto max-w-custom h-screen pt-4">
+    <main className="flex flex-col mx-auto max-w-custom h-screen pt-4 px-2">
       <Header />
       <div className="flex flex-col w-full mt-8">
         <Block title="Downloads">
@@ -17,42 +17,6 @@ export default function Download() {
       </div>
       <Footer />
     </main>
-  )
-}
-
-function Footer() {
-  return (
-    <div className="flex flex-col w-full mt-auto mb-2.5">
-      <hr className="w-full border-[1px] border-lines-offwhite mb-2" />
-      <div className="flex flex-row justify-between items-center">
-        <div className="flex flex-row gap-1">
-          <h3 className="text-sm font-sans font-footer text-[#ccc]">
-            THE MACROCOSM CONSORTIUM
-          </h3>
-          <h3 className="text-sm font-sans font-footer text-[#ccc]">
-            © 2100
-          </h3>
-        </div>
-        <div className="flex flex-row gap-4">
-          <h3 className="text-sm font-sans font-footer text-[#ccc]">
-            LEGAL
-          </h3>
-          <h3 className="text-sm font-sans font-footer text-[#ccc]">
-            CONTACT
-          </h3>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function Block({ title, margin, children }: { title: string, margin?: number, children: React.ReactNode }) {
-  const marginStyle = margin ? `mt-${margin}` : '';
-  return (
-    <div className={clsx("flex flex-col w-full", marginStyle)}>
-      <h1 className="text-base font-sans font-bold text-letter-default mb-1">{title}</h1>
-      {children}
-    </div>
   )
 }
 

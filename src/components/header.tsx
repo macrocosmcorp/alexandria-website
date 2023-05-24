@@ -1,7 +1,9 @@
+'use client';
+
 import clsx from "clsx";
 import Image from 'next/image';
+import { useRouter } from "next/navigation";
 import Logo from "../../public/images/AlexandriaLogo.svg";
-
 
 export default function Header() {
   return (
@@ -15,8 +17,8 @@ export default function Header() {
         <PageSelectorButton state={PageSelectorState.Disabled} text="Case Law" />
         <PageSelectorButton state={PageSelectorState.Disabled} text="SEC Filings" />
         <PageSelectorButton state={PageSelectorState.Disabled} text="Patents" />
-        <PageSelectorButton state={PageSelectorState.Active} text="Download" />
-        <PageSelectorButton state={PageSelectorState.Available} text="About Us" />
+        <PageSelectorButton state={PageSelectorState.Active} text="Download" link="/download" />
+        <PageSelectorButton state={PageSelectorState.Available} text="About Us" link="https://macrocosm.so" />
       </div>
     </div>
   )
@@ -28,7 +30,9 @@ enum PageSelectorState {
   Active
 }
 
-function PageSelectorButton({ state, text }: { state: PageSelectorState, text: string }) {
+function PageSelectorButton({ state, text, link }: { state: PageSelectorState, text: string, link?: string }) {
+  const router = useRouter();
+
   const buttonBaseStyle = clsx("flex justify-center items-center w-1/6 h-7 font-sans font-medium gap-1.5")
   const buttonDisabledStyle = clsx("bg-white border-tiny border-lines-soft text-letter-soft cursor-not-allowed")
   const buttonAvailableStyle = clsx("bg-white border-tiny border-lines-dark text-letter-default cursor-pointer")
@@ -46,8 +50,20 @@ function PageSelectorButton({ state, text }: { state: PageSelectorState, text: s
       styles = [buttonActiveStyle, buttonHoverStyle];
       break;
   }
+
+  const handleClick = () => {
+    if (link) {
+      if (link.startsWith('http') || link.startsWith('https')) {
+        window.location.href = link; // Navigate to external URL
+      } else {
+        router.push(link); // Navigate to internal URL
+      }
+    }
+  };
+
+
   return (
-    <div className={clsx(buttonBaseStyle, ...styles, 'text-wide')}>
+    <div className={clsx(buttonBaseStyle, ...styles, 'text-wide')} onClick={handleClick}>
       {text}
       {state === PageSelectorState.Active && <svg
         xmlns="http://www.w3.org/2000/svg"
