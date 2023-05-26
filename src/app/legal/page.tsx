@@ -31,7 +31,7 @@ function LegalBlock() {
         <br />        By using this website (the &quot;Site&quot;), you are agreeing to be bound by the terms and conditions contained in this Legal Notice. If you do not agree with any of these terms, please do not use our Site.
         <br />
         <br />        2. Intellectual Property Rights
-        <br />        The Site and its original content, features, and functionality are owned by [Your Company Name] (&quot;Company,&quot; &quot;we,&quot; &quot;us&quot;) and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
+        <br />        The Site and its original content, features, and functionality are owned by DePue Industries (&quot;Company,&quot; &quot;we,&quot; &quot;us&quot;) and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
         <br />
         <br />        The Company does not claim ownership of the research papers that are made available through the Site. All papers and their contents are the property of their respective owners. The Site is simply a search engine that provides access to research papers hosted on Arxiv.org, and does not host any content itself.
         <br />
@@ -50,7 +50,7 @@ function LegalBlock() {
         <br />        We reserve the right, at our sole discretion, to modify or replace this Legal Notice at any time. If a revision is material, we will make reasonable efforts to provide at least 30 days&apos; notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
         <br />
         <br />        7. Contact Us
-        <br />        If you have any questions about this Legal Notice, please contact us at [Your Contact Information].
+        <br />        If you have any questions about this Legal Notice, please contact us at team@macrocosm.so.
         <br />
         <br />        This document was last updated on May 24, 2023.
         <br />      </p>
