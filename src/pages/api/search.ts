@@ -17,12 +17,11 @@ const search = async (req: NextApiRequest, res: NextApiResponse) => {
                 },
             });
 
-            const queryVector = embedResponse.data.data[0].embedding;
+            if (!process.env.PINECONE_API_KEY || !process.env.PINECONE_INDEX_NAME) {
+                throw new Error('PINECONE keys not set');
+            }
 
-            // Query Pinecone
-            // TODO: NEED TO CHANGE THE INDEX NAME AND PROJECT ID
-            // https://index_name-project_id.svc.environment.pinecone.io/query
-            const pineconeResponse = await axios.post('https://abstracts-97548a4.svc.us-central1-gcp.pinecone.io/query', {
+            const pineconeResponse = await axios.post(process.env.PINECONE_INDEX_NAME, {
                 vector: queryVector,
                 topK: 10,
                 includeValues: true,

@@ -37,6 +37,16 @@ const colorStyles = {
     border: "border-lines-green",
     text: "text-letter-white",
   },
+  black: {
+    background: "bg-background-black",
+    border: "border-lines-black",
+    text: "text-letter-white",
+  },
+  lightblack: {
+    background: "bg-background-lightblack",
+    border: "border-lines-black",
+    text: "text-letter-white",
+  },
 };
 
 interface MonospaceProps {
@@ -48,7 +58,10 @@ interface MonospaceProps {
 export const MonospaceLabel = ({ text, color, width }: MonospaceProps) => {
   const { background, border, text: textColor } = colorStyles[color];
   const boxStyle = clsx('inline-flex flex-row items-center leading-4 pb-[1px] justify-center gap-1 border-micro', background, border);
-  const textStyle = clsx("text-[14px] font-mono mono-medium", textColor);
+  let textStyle = clsx("text-[14px] font-mono mono-medium", textColor);
+  if (textColor === "text-letter-white") {
+    textStyle = clsx("text-[14px] font-mono mono-light", textColor);
+  }
 
   return (
     <div className={boxStyle} style={{ width }}>
@@ -59,13 +72,13 @@ export const MonospaceLabel = ({ text, color, width }: MonospaceProps) => {
 
 export const MonospaceLink = ({ text, color, width, link }: MonospaceProps & { link: string }) => {
   const { background, border, text: textColor } = colorStyles[color];
-  const boxStyle = clsx('inline-flex flex-row items-center leading-4 pb-[1px] justify-center gap-1 border-micro', background, border);
+  const boxStyle = clsx('inline-flex flex-row items-center leading-4 pb-[1px] justify-center gap-1 border-micro mb-[3px]', background, border);
   const textStyle = clsx("text-[13px] font-mono mono-bold", textColor);
   const arrowStyle = clsx("text-[14px] font-sans font-medium", textColor);
   const hoverStyle = clsx("hover:bg-black hover:text-white hover:fill-white hover:border-lines-black")
 
   return (
-    <Link href={link}>
+    <Link href={link} >
       <div className={clsx(boxStyle, hoverStyle)} style={{ width }}>
         <h1 className={textStyle}>{text}</h1>
         <h1 className={arrowStyle}>{' -> '}</h1>

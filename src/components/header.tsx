@@ -2,10 +2,12 @@
 
 import clsx from "clsx";
 import Image from 'next/image';
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Logo from "../../public/images/AlexandriaLogo.svg";
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <div className="flex flex-col w-full">
       <div className="flex flex-row justify-between items-center mt-12 p-0">
@@ -13,11 +15,11 @@ export default function Header() {
       </div>
       <hr className="w-full border-[1px] border-lines-softest mt-2.5 mb-3" />
       <div className="flex flex-row gap-2">
-        <PageSelectorButton state={PageSelectorState.Disabled} text="Research" />
+        <PageSelectorButton state={pathname == '/religion' ? PageSelectorState.Active : PageSelectorState.Available} text="Religion" link="/religion" />
         <PageSelectorButton state={PageSelectorState.Disabled} text="Case Law" />
-        <PageSelectorButton state={PageSelectorState.Disabled} text="SEC Filings" />
+        <PageSelectorButton state={PageSelectorState.Disabled} text="Research" />
         <PageSelectorButton state={PageSelectorState.Disabled} text="Patents" />
-        <PageSelectorButton state={PageSelectorState.Active} text="Download" link="/download" />
+        <PageSelectorButton state={pathname == '/download' ? PageSelectorState.Active : PageSelectorState.Available} text="Download" link="/download" />
         <PageSelectorButton state={PageSelectorState.Available} text="About Us" link="https://macrocosm.so" />
       </div>
     </div>

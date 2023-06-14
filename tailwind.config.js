@@ -40,6 +40,7 @@ module.exports = {
           footer: '#959595',
           dark: '#222',
           default: '#000000',
+          blueish: '#D2E0FC',
         },
         background: {
           grey: '#F2F2F2',
@@ -48,6 +49,8 @@ module.exports = {
           yellow: '#FBC300',
           red: '#C70000',
           green: '#008F28',
+          black: '#000000',
+          lightblack: '#5A5A5A',
         },
       },
     },
