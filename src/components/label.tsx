@@ -18,7 +18,7 @@ const colorStyles = {
     text: "text-letter-default",
   },
   darkgrey: {
-    background: "bg-background-darkgrey",
+    background: "bg-background-darkergrey",
     border: "border-lines-darkest",
     text: "text-letter-default",
   },

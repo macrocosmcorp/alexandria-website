@@ -44,6 +44,7 @@ module.exports = {
         },
         background: {
           grey: '#F2F2F2',
+          darkergrey: '#AFAFAF',
           darkgrey: '#EEEEEE',
           blue: '#1E62EF',
           yellow: '#FBC300',

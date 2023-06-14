@@ -24,7 +24,7 @@ function AboutBlock() {
   return (
     <div className="w-full px-2 py-1 border-tiny border-lines-soft">
       <p className='text-basesm font-sans font-normal text-letter-default'>
-        We need your help to embed all religious texts! The biggest bottleneck is the time it takes to properly find the texts, clean them, and format them properly in preparation for embedding. If you're interested in seeing a specific text, please contribute on Github by helping us find the text, cleaning the document, and formatting it. We'll take care of the rest.
+        We need your help to embed all religious texts! The biggest bottleneck is the time it takes to properly find the texts, clean them, and format them properly in preparation for embedding. If you&apos;re interested in seeing a specific text, please contribute on Github by helping us find the text, cleaning the document, and formatting it. We&apos;ll take care of the rest. <a className='underline text-blue-600' href="https://github.com/macrocosmcorp/tenet">Visit the Github repository</a>.
       </p>
     </div>
   )
@@ -53,7 +53,7 @@ function DownloadRow({ religion, description, model, size, csvLink, txtLink, lin
           <div className='flex gap-1.5'><MonospaceLink text='CSV' color={status == 'EMBEDDING' ? 'red' : 'lightblack'} width={58} link={status == 'EMBEDDING' ? csvLink : 'https://github.com/macrocosmcorp/tenet'} />
             <MonospaceLink text='TXT' color={status == 'PARSING' || status == 'EMBEDDING' ? 'red' : 'lightblack'} width={58} link={status == 'PARSING' || status == 'EMBEDDING' ? txtLink : 'https://github.com/macrocosmcorp/tenet'} /></div>
           <div>
-            <MonospaceLabel text={status} color="white" width={98} />
+            <MonospaceLabel text={status} color="grey" width={98} />
           </div>
         </>
       ) : (

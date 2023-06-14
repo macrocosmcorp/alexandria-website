@@ -19,7 +19,7 @@ export default function Header() {
         <PageSelectorButton state={PageSelectorState.Disabled} text="Case Law" />
         <PageSelectorButton state={PageSelectorState.Disabled} text="Research" />
         <PageSelectorButton state={PageSelectorState.Disabled} text="Patents" />
-        <PageSelectorButton state={pathname == '/download' ? PageSelectorState.Active : PageSelectorState.Available} text="Download" link="/download" />
+        <PageSelectorButton state={pathname == '/download' ? PageSelectorState.Active : PageSelectorState.Available} text="Downloads" link="/download" />
         <PageSelectorButton state={PageSelectorState.Available} text="About Us" link="https://macrocosm.so" />
       </div>
     </div>
