@@ -16,11 +16,11 @@ export default function Download() {
   return (
     <main className="flex flex-col mx-auto max-w-custom min-h-screen flex-grow pt-4 px-2">
       <Header />
-      <div className="flex flex-col w-full mt-8">
+      <div className="flex flex-col w-full mt-8 gap-y-8">
         <Block title="Downloads">
           <DownloadsBlock />
         </Block>
-        <Block title="Support" margin={8}>
+        <Block title="Support">
           <AboutBlock />
         </Block>
       </div>
@@ -107,6 +107,13 @@ function DownloadsBlock() {
           size="7.6 GB"
           link="https://drive.google.com/file/d/1g3K-wlixFxklTSUQNZKpEgN4WNTFTPIZ/view?usp=share_link"
         />
+        <DownloadRow
+          date="2023-06-14"
+          description="All major religious texts embedded using the Ada-002 model. "
+          documents="50 M"
+          size="20 GB"
+          link='https://drive.google.com/file/d/1g3K-wlixFxklTSUQNZKpEgN4WNTFTPIZ/view?usp=share_link'
+        />
         <div className="flex text-basesm font-sans font-normal text-letter-softest border-b-lines-soft border-b-tiny h-[29px] items-center justify-center pt-0.5">
           ↓ &nbsp; Help us decide what to embed next by voting below! &nbsp; ↓
         </div>
@@ -134,12 +141,7 @@ function DownloadsBlock() {
           size="~3.4 TB"
           link={generateTwitterIntent(tweetText('all repositories on Github'), 'https://alex.macrocosm.so/download')}
         />
-        <VoteRow
-          description="All major religious texts embedded using the InstructorXL model. "
-          documents="50 M"
-          size="~20 GB"
-          link={generateTwitterIntent(tweetText('all major religious texts'), 'https://alex.macrocosm.so/download')}
-        />
+
       </div>
     </div>
   )
