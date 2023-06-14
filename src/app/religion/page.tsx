@@ -7,11 +7,20 @@ export default function Download() {
   return (
     <main className="flex flex-col mx-auto max-w-custom min-h-screen flex-grow pt-4 px-2">
       <Header />
-      <div className="flex flex-col w-full mt-8 mb-8">
-        <Block title="Religious Texts">
+      <div className="flex flex-col w-full mt-8">
+        <Block title="Interactive Projections" marginBottom={8}>
+          <div className="w-full px-2 py-1 border-tiny border-lines-soft" >
+            <div className='flex gap-x-2 flex-wrap'>
+              <MonospaceLink text="All Islam projected" color="black" width={180} link="https://atlas.nomic.ai/map/13e4a9f6-dbc4-414c-beb0-d42ed3289958/c4f7d21c-15df-4927-8e34-ff86d821001d" />
+              <MonospaceLink text="All Christianity projected" color="black" width={240} link="https://atlas.nomic.ai/map/707d769b-f72b-401b-be3b-0a56650cdf49/62eb43e5-cddd-45c7-b661-53c5b2316f79" />
+              <MonospaceLink text="All Mormonism projected" color="black" width={210} link="https://atlas.nomic.ai/map/8992e6d2-2ff7-4a53-bcc9-7c8ba962b5c9/79eab75f-11f5-423e-80b9-da3f682bd337" />
+            </div>
+          </div>
+        </Block>
+        <Block title="Religious Texts" marginBottom={8}>
           <DownloadsBlock />
         </Block>
-        <Block title="Support" margin={8}>
+        <Block title="Support" marginBottom={12}>
           <AboutBlock />
         </Block>
       </div>
