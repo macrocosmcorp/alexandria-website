@@ -95,10 +95,10 @@ function DownloadsBlock() {
           religion="CHRISTIAN"
           description="King James Bible"
           model="Ada-002"
-          size="931 K"
-          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
-          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
-          link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/christianity"
+          size="859 K"
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/christianity/christianity_kjv_verses.csv"
+          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/christianity/CLEAN_kjv.txt"
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/king_james_bible_embeddings"
         />
         <DownloadRow
           religion="CHRISTIAN"
@@ -108,7 +108,7 @@ function DownloadsBlock() {
           csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/christianity"
-          status='PARSING'
+          status='SOURCING' // SOURCING until it's in the tenet repo
         />
         <DownloadRow
           religion="CHRISTIAN"
@@ -118,35 +118,35 @@ function DownloadsBlock() {
           csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/christianity"
-          status='PARSING'
+          status='SOURCING' // SOURCING until it's in the tenet repo
         />
         <DownloadRow
           religion="MORMONISM"
           description="The Book Of Mormon"
           model="Ada-002"
-          size="291 K"
+          size="289 K"
           csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
-          link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/book_of_mormon_embeddings"
         />
         <DownloadRow
           religion="ISLAM"
           description="Quran"
           model="Ada-002"
-          size="77 K"
-          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
-          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
-          link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
+          size="174 K"
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/islam/quran_verses.csv"
+          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/islam/CLEAN_The-Complete-Hadith.txt"
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/quran_embeddings"
         />
         <DownloadRow
           religion="ISLAM"
           description="Hadith"
           model="Ada-002"
-          size="??? K"
+          size="71 K"
           csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
-          status='SOURCING'
+          status='PARSING'
         />
         <DownloadRow
           religion="ISLAM"
@@ -212,9 +212,9 @@ function DownloadsBlock() {
           religion="BUDDHISM"
           description="Tibetan Book of the Dead"
           model="Ada-002"
-          size="??? K"
+          size="29 K"
           csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
-          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
+          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/buddhism/CLEAN_book-of-the-dead.txt"
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
           status='PARSING'
         />
@@ -226,15 +226,15 @@ function DownloadsBlock() {
           csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
-          status='PARSING'
+          status='SOURCING'  // sourcing until it's in the repos
         />
         <DownloadRow
           religion="HINDUISM"
           description="Upanishads"
           model="Ada-002"
-          size="??? K"
-          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
-          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
+          size="113 K"
+          csvLink="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/hinduism/upanishads"
+          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/hinduism/CLEAN_Bhagavad_Gita.txt" // <--- this is actually where I parsed the upanishads from --brent
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
           status='EMBEDDING'
         />
@@ -242,19 +242,19 @@ function DownloadsBlock() {
           religion="HINDUISM"
           description="Bhagavad Gita"
           model="Ada-002"
-          size="??? K"
-          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
-          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
-          link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
+          size="19 K"
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/hinduism/bhagavad_gita_verses.csv"
+          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/hinduism/CLEAN_JustBhagavadGita.txt"
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/gita_embeddings"
         />
         <DownloadRow
           religion="RUISM"
           description="Analects of Confucius"
           model="Ada-002"
-          size="??? K"
-          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
-          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
-          link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
+          size="27 K"
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/confuscianism/analects_verses.csv"
+          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/confuscianism/CLEAN_analects_confuscious.txt"
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/analects_embeddings"
         />
         <DownloadRow
           religion="RUISM"
@@ -270,7 +270,7 @@ function DownloadsBlock() {
           religion="RUISM"
           description="Doctrine of the Mean"
           model="Ada-002"
-          size="??? K"
+          size="7 K"
           csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
@@ -280,7 +280,7 @@ function DownloadsBlock() {
           religion="RUISM"
           description="Great Learning"
           model="Ada-002"
-          size="??? K"
+          size="3 K"
           csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
@@ -290,10 +290,10 @@ function DownloadsBlock() {
           religion="BAHA'I"
           description="Kitab-i-Aqdas"
           model="Ada-002"
-          size="??? K"
-          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
-          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
-          link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
+          size="19 K"
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/bahai/kitab_bahaullah_paragraphs.csv"
+          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/bahai/CLEAN_kitab_bahaullah.txt"
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/kitab_embeddings"
         />
         <DownloadRow
           religion="BAHA'I"
@@ -309,7 +309,7 @@ function DownloadsBlock() {
           religion="BAHA'I"
           description="The Seven Valleys of Baha'u'llah"
           model="Ada-002"
-          size="??? K"
+          size="11 K"
           csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
@@ -321,9 +321,9 @@ function DownloadsBlock() {
           model="Ada-002"
           size="??? K"
           csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
-          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
+          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/taoism/CLEAN_taote_laotzu.txt"
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
-          status='CLEANING'
+          status='PARSING'
         />
         <DownloadRow
           religion="TAOISM"
@@ -333,7 +333,7 @@ function DownloadsBlock() {
           csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/mormon_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/mormon/CLEAN_book_of_mormon.txt"
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
-          status='CLEANING'
+          status='SOURCING'
         />
         <div className="flex text-basesm font-sans font-normal text-letter-softest border-b-lines-soft border-b-tiny h-[29px] items-center justify-center pt-0.5">
           ↓ &nbsp; Help us add more texts by contributing on Github below! We want all religions represented. &nbsp; ↓
