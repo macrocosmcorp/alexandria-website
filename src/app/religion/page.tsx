@@ -15,7 +15,7 @@ export default function Download() {
             </p>
           </div>
         </Block>
-        <Block title="Interactive Maps" >
+        <Block title="Interactive Maps by Nomic.ai" >
           <div className="w-full px-2 py-1 border-tiny border-lines-soft" >
             <div className='flex gap-x-2 flex-wrap'>
               <MonospaceLink text="All Islam projected" color="grey" width={180} link="https://atlas.nomic.ai/map/f2e49a6d-94ce-4acd-b7c6-cccc79ea4e87/8fc3111a-8e9e-443f-bee3-2f50275ce0f4" />
