@@ -8,12 +8,23 @@ export default function Download() {
     <main className="flex flex-col mx-auto max-w-custom min-h-screen flex-grow pt-4 px-2">
       <Header />
       <div className="flex flex-col w-full mt-8 mb-10 gap-y-8">
-        <Block title="Interactive Projections" >
+        <Block title="Live Demo" >
+          <div className="w-full px-2 py-1 border-tiny border-lines-soft">
+            <p className='text-basesm font-sans font-normal text-letter-default'>
+              We just launched a live demo where you can talk, ask questions to, and search all religious texts! Check it out: <a className='underline text-blue-600' href="https://tensor.church">tensor.church</a>.
+            </p>
+          </div>
+        </Block>
+        <Block title="Interactive Maps" >
           <div className="w-full px-2 py-1 border-tiny border-lines-soft" >
             <div className='flex gap-x-2 flex-wrap'>
-              <MonospaceLink text="All Islam projected" color="black" width={180} link="https://atlas.nomic.ai/map/13e4a9f6-dbc4-414c-beb0-d42ed3289958/c4f7d21c-15df-4927-8e34-ff86d821001d" />
-              <MonospaceLink text="All Christianity projected" color="black" width={240} link="https://atlas.nomic.ai/map/707d769b-f72b-401b-be3b-0a56650cdf49/62eb43e5-cddd-45c7-b661-53c5b2316f79" />
-              <MonospaceLink text="All Mormonism projected" color="black" width={210} link="https://atlas.nomic.ai/map/8992e6d2-2ff7-4a53-bcc9-7c8ba962b5c9/79eab75f-11f5-423e-80b9-da3f682bd337" />
+              <MonospaceLink text="All Islam projected" color="grey" width={180} link="https://atlas.nomic.ai/map/f2e49a6d-94ce-4acd-b7c6-cccc79ea4e87/8fc3111a-8e9e-443f-bee3-2f50275ce0f4" />
+              <MonospaceLink text="All Christianity projected" color="grey" width={240} link="https://atlas.nomic.ai/map/4ea87eb9-284c-4260-af1c-2cabdff3ae3a/ae5c19ab-156e-46ad-a731-3f6c45d9b334" />
+              <MonospaceLink text="All Mormonism projected" color="grey" width={210} link="https://atlas.nomic.ai/map/fcc613a1-c1a6-4d97-9c4a-5ad704d9b1bb/65a9d60c-91fa-482a-9339-6fcab580056c" />
+              <MonospaceLink text="All Hinduism projected" color="grey" width={210} link="https://atlas.nomic.ai/map/4c30a04a-2da9-4729-8c0a-fdf63205a5ae/45926592-e6c1-49f1-83f8-8cc4af7a6ffe" />
+              <MonospaceLink text="All Bahai projected" color="grey" width={210} link="https://atlas.nomic.ai/map/22f6f9f5-511d-4f7d-a101-5affb3977b12/107dfa9a-8908-4979-a3b7-f97a5f445c9f" />
+              <MonospaceLink text="All Confucianism projected" color="grey" width={240} link="https://atlas.nomic.ai/map/ea1aeae9-1ac6-4c01-9f54-29731dde208d/58b846eb-39b6-43df-bd55-50dbde2a9423" />
+              <MonospaceLink text="All religions projected" color="grey" width={210} link="https://atlas.nomic.ai/map/143fd480-7efd-419b-becf-a28a5e0c796d/27a7375f-5e55-4165-af41-0b0db13587b1" />
             </div>
           </div>
         </Block>
