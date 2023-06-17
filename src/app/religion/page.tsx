@@ -116,20 +116,18 @@ function DownloadsBlock() {
           description="Apocrypha"
           model="Ada-002"
           size="21 K"
-          csvLink=""
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/christianity/christianity_apodat_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/christianity/CLEAN_apodat.txt"
-          link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/christianity"
-          status='PARSING'
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/christianity_apodat_embeddings"
         />
         <DownloadRow
           religion="CHRISTIAN"
           description="Deutorocanonical Books"
           model="Ada-002"
           size="15 K"
-          csvLink=""
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/christianity/christianity_deut_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/christianity/CLEAN_deut.txt"
-          link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/christianity"
-          status='PARSING'
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/christianity_deut_embeddings"
         />
         <DownloadRow
           religion="MORMONISM"
@@ -154,10 +152,9 @@ function DownloadsBlock() {
           description="Hadith"
           model="Ada-002"
           size="71 K"
-          csvLink=""
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/islam/hadith.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/islam/CLEAN_The-Complete-Hadith.txt"
-          link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
-          status='PARSING'
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/hadith_embeddings"
         />
         <DownloadRow
           religion="ISLAM"
@@ -208,6 +205,24 @@ function DownloadsBlock() {
           txtLink=""
           link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
           status='SOURCING'
+        />
+        <DownloadRow
+          religion="BUDDHISM"
+          description="Lankavatara Sutra"
+          model="Ada-002"
+          size="??? K"
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/buddhism/lankavatara_paragraphs.csv"
+          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/buddhism/CLEAN_Lankavatara_Sutra.txt"
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/buddhism_embeddings"
+        />
+        <DownloadRow
+          religion="BUDDHISM"
+          description="Lotus Sutra"
+          model="Ada-002"
+          size="??? K"
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/buddhism/lotus_pages.csv"
+          txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/buddhism/CLEAN_Lotus_Sutra.txt"
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/buddhism_embeddings"
         />
         <DownloadRow
           religion="BUDDHISM"
@@ -282,20 +297,18 @@ function DownloadsBlock() {
           description="Doctrine of the Mean"
           model="Ada-002"
           size="7 K"
-          csvLink=""
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/confuscianism/confucianism_doctrine_of_the_mean_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/confuscianism/CLEAN_doctmean_confucius.txt"
-          link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
-          status='PARSING'
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/doctrine_of_the_mean_embeddings"
         />
         <DownloadRow
           religion="RUISM"
           description="Great Learning"
           model="Ada-002"
           size="3 K"
-          csvLink=""
+          csvLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/confuscianism/confucianism_great_learning_verses.csv"
           txtLink="https://raw.githubusercontent.com/macrocosmcorp/tenet/main/religious-texts/confuscianism/CLEAN_learning_confucius.txt"
-          link="https://github.com/macrocosmcorp/tenet/tree/main/religious-texts/mormon"
-          status='PARSING'
+          link="https://github.com/macrocosmcorp/tenet/tree/main/embeddings/confucianism_great_learning_embeddings"
         />
         <DownloadRow
           religion="BAHA'I"
