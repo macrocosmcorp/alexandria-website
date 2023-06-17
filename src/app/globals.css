@@ -12,6 +12,10 @@
     font-variation-settings: 'wght' 125;
   }
 
+  .mono-light {
+    font-variation-settings: 'wght' 115;
+  }
+
   .font-footer {
     font-variation-settings: 'wght' 700, 'wdth' 5;
   }
@@ -77,4 +81,8 @@ body {
 
 .grid-cols-downloadRow {
   grid-template-columns: 113px 1fr 113px 118px 103px;
+}
+
+.grid-cols-religionRow {
+  grid-template-columns: 123px 1fr 107px 111px 130px 102px;
 }
