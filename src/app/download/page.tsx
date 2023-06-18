@@ -112,7 +112,7 @@ function DownloadsBlock() {
           description="All major religious texts embedded using the Ada-002 model. "
           documents="50 M"
           size="20 GB"
-          link='https://drive.google.com/file/d/1g3K-wlixFxklTSUQNZKpEgN4WNTFTPIZ/view?usp=share_link'
+          link='https://github.com/macrocosmcorp/tenet/tree/main/embeddings'
         />
         <div className="flex text-basesm font-sans font-normal text-letter-softest border-b-lines-soft border-b-tiny h-[29px] items-center justify-center pt-0.5">
           ↓ &nbsp; Help us decide what to embed next by voting below! &nbsp; ↓
