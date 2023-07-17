@@ -114,6 +114,13 @@ function DownloadsBlock() {
           size="20 GB"
           link='https://github.com/macrocosmcorp/tenet/tree/main/embeddings'
         />
+        <DownloadRow
+          date="2023-07-14"
+          description="All of Wikipedia data embedded using sentence-transformers/all-MiniLM-L6-v2"
+          documents="n/a"
+          size="20.6 GB"
+          link='https://storage.fleek-internal.com/3bd9e981-1e71-4573-a2ad-b9e8e876f3ef-bucket/WikiEmbeddings.npy'
+        />
         <div className="flex text-basesm font-sans font-normal text-letter-softest border-b-lines-soft border-b-tiny h-[29px] items-center justify-center pt-0.5">
           ↓ &nbsp; Help us decide what to embed next by voting below! &nbsp; ↓
         </div>
